@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>演示站点</title>
-    <link>https://figureair.github.io/</link>
-    <description>Recent content on 演示站点</description>
+    <title>Posts on 演示站点</title>
+    <link>https://figureair.github.io/post/</link>
+    <description>Recent content in Posts on 演示站点</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://figureair.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://figureair.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chinese Test</title>
       <link>https://figureair.github.io/p/test-chinese/</link>
@@ -21,15 +21,6 @@
 这么沉痛的呵护 我怎么能翱翔
 最暖的憂傷 - 田馥甄
 图片 1 2 3 ![Photo by Florian Klauer on Unsplash](florian-klauer-nptLmg6jqDo-unsplash.jpg) ![Photo by Luca Bravo on Unsplash](luca-bravo-alS7ewQ41M8-unsplash.</description>
-    </item>
-    
-    <item>
-      <title>Archives</title>
-      <link>https://figureair.github.io/archives/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://figureair.github.io/archives/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -66,35 +57,6 @@
       
       <guid>https://figureair.github.io/p/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Links</title>
-      <link>https://figureair.github.io/links/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://figureair.github.io/links/</guid>
-      <description>To use this feature, add links section to frontmatter.
-This page&amp;rsquo;s frontmatter:
-1 2 3 4 5 6 7 8 9 links: - title: GitHub description: GitHub is the world&amp;#39;s largest software development platform. website: https://github.com image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png - title: TypeScript description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. website: https://www.typescriptlang.org image: ts-logo-128.jpg image field accepts both local and external images.</description>
-    </item>
-    
-    <item>
-      <title>Search</title>
-      <link>https://figureair.github.io/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://figureair.github.io/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>关于</title>
-      <link>https://figureair.github.io/%E5%85%B3%E4%BA%8E/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://figureair.github.io/%E5%85%B3%E4%BA%8E/</guid>
-      <description>This is a test page for i18n support.</description>
     </item>
     
   </channel>
