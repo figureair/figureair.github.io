@@ -11,11 +11,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ar"
-                href="https://figureair.github.io/ar/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-cn"
                 href="https://figureair.github.io/"
                 />
@@ -34,11 +29,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ar"
-                href="https://figureair.github.io/ar/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh-cn"
                 href="https://figureair.github.io/categories/"
                 />
@@ -52,11 +42,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://figureair.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ar"
-                href="https://figureair.github.io/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
