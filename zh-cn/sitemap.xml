@@ -3,7 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://figureair.github.io/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,12 +13,6 @@
                 hreflang="zh-cn"
                 href="https://figureair.github.io/"
                 />
-  </url><url>
-    <loc>https://figureair.github.io/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://figureair.github.io/page/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://figureair.github.io/categories/</loc>
     <xhtml:link
@@ -33,9 +26,7 @@
                 href="https://figureair.github.io/categories/"
                 />
   </url><url>
-    <loc>https://figureair.github.io/links/</loc>
-  </url><url>
-    <loc>https://figureair.github.io/search/</loc>
+    <loc>https://figureair.github.io/page/</loc>
   </url><url>
     <loc>https://figureair.github.io/tags/</loc>
     <xhtml:link
@@ -52,5 +43,11 @@
     <loc>https://figureair.github.io/categories/test/</loc>
   </url><url>
     <loc>https://figureair.github.io/%E5%85%B3%E4%BA%8E/</loc>
+  </url><url>
+    <loc>https://figureair.github.io/%E5%BD%92%E6%A1%A3/</loc>
+  </url><url>
+    <loc>https://figureair.github.io/%E9%93%BE%E6%8E%A5/</loc>
+  </url><url>
+    <loc>https://figureair.github.io/%E6%90%9C%E7%B4%A2/</loc>
   </url>
 </urlset>
