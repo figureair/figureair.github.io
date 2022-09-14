@@ -5,7 +5,18 @@
         <link>https://figureair.github.io/</link>
         <description>Recent content on Figureair&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://figureair.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 14 Sep 2022 14:08:08 +0800</lastBuildDate><atom:link href="https://figureair.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Rust学习随笔</title>
+        <link>https://figureair.github.io/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/</link>
+        <pubDate>Wed, 14 Sep 2022 14:08:08 +0800</pubDate>
+        
+        <guid>https://figureair.github.io/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;早就&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>关于</title>
         <link>https://figureair.github.io/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

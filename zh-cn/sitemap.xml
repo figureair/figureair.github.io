@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://figureair.github.io/</loc>
+    <lastmod>2022-09-14T14:08:08+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,6 +16,7 @@
                 />
   </url><url>
     <loc>https://figureair.github.io/categories/</loc>
+    <lastmod>2022-09-14T14:08:08+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -25,6 +27,15 @@
                 hreflang="zh-cn"
                 href="https://figureair.github.io/categories/"
                 />
+  </url><url>
+    <loc>https://figureair.github.io/post/</loc>
+    <lastmod>2022-09-14T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://figureair.github.io/categories/rust/</loc>
+    <lastmod>2022-09-14T14:08:08+08:00</lastmod>
+  </url><url>
+    <loc>https://figureair.github.io/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-09-14T14:08:08+08:00</lastmod>
   </url><url>
     <loc>https://figureair.github.io/page/</loc>
   </url><url>
