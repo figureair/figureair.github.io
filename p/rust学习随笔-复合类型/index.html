@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Rust或许是世界上最好的语言？'><title>Rust学习随笔</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Rust或许是世界上最好的语言？'><title>Rust学习随笔-复合类型</title>
 
-<link rel='canonical' href='https://figureair.github.io/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/'>
+<link rel='canonical' href='https://figureair.github.io/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94-%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/'>
 
-<link rel="stylesheet" href="/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css"><meta property='og:title' content='Rust学习随笔'>
+<link rel="stylesheet" href="/scss/style.min.ac77dcf8b111b51da39a92990f431923f210f3876d85798a2125667f96dc33a4.css"><meta property='og:title' content='Rust学习随笔-复合类型'>
 <meta property='og:description' content='Rust或许是世界上最好的语言？'>
-<meta property='og:url' content='https://figureair.github.io/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/'>
+<meta property='og:url' content='https://figureair.github.io/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94-%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/'>
 <meta property='og:site_name' content='Figureair&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-09-14T14:08:08&#43;08:00'/><meta property='article:modified_time' content='2022-09-14T14:08:08&#43;08:00'/>
-<meta name="twitter:title" content="Rust学习随笔">
+<meta name="twitter:title" content="Rust学习随笔-复合类型">
 <meta name="twitter:description" content="Rust或许是世界上最好的语言？">
     </head>
     <body class="
@@ -262,7 +262,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/">Rust学习随笔</a>
+            <a href="/p/rust%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94-%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">Rust学习随笔-复合类型</a>
         </h2>
     
         
@@ -314,8 +314,91 @@
     <section class="article-content">
     
     
-    <h2 id="前言">前言</h2>
-<p>早就</p>
+    <h1 id="复合类型">复合类型</h1>
+<h2 id="字符串与切片">字符串与切片</h2>
+<h3 id="切片">切片</h3>
+<p>一个示例代码和错误解析</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello world&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">first_word</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"> </span><span class="c1">// error!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;the first word is: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">first_word</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nb">String</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kp">&amp;</span><span class="kt">str</span> <span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">&amp;</span><span class="n">s</span><span class="p">[</span><span class="o">..</span><span class="mi">1</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>错误原因：当我们已经有了可变借用时，就无法再拥有不可变的借用。因为 <code>clear</code> 需要清空改变 <code>String</code>，因此它需要一个可变借用（利用 VSCode 可以看到该方法的声明是 <code>pub fn clear(&amp;mut self)</code> ，参数是对自身的可变借用 ）；而之后的 <code>println!</code> 又使用了不可变借用，也就是在 <code>s.clear()</code> 处可变借用与不可变借用试图同时生效，因此编译无法通过。</p>
+<h3 id="rust中的字符串">Rust中的字符串</h3>
+<p>当 Rust 用户提到字符串时，往往指的就是 <code>String</code> 类型和 <code>&amp;str</code> 字符串切片类型，这两个类型都是 UTF-8 编码。</p>
+<h3 id="string-与-str-的转换">String 与 &amp;str 的转换</h3>
+<p>在之前的代码中，已经见到好几种从 <code>&amp;str</code> 类型生成 <code>String</code> 类型的操作：</p>
+<ul>
+<li><code>String::from(&quot;hello,world&quot;)</code></li>
+<li><code>&quot;hello,world&quot;.to_string()</code></li>
+</ul>
+<p>那么如何将 <code>String</code> 类型转为 <code>&amp;str</code> 类型呢？答案很简单，取引用即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&#34;hello,world!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">say_hello</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">say_hello</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">[</span><span class="o">..</span><span class="p">]);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">say_hello</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">as_str</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;{}&#34;</span><span class="p">,</span><span class="n">s</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="字符串切片">字符串切片</h3>
+<p>字符串切片是非常危险的操作，因为切片的索引是通过字节来进行，但是字符串又是 UTF-8 编码，因此你无法保证索引的字节刚好落在字符的边界上，例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;中国人&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">hello</span><span class="p">[</span><span class="mi">0</span><span class="o">..</span><span class="mi">2</span><span class="p">];</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行上面的程序，会直接造成崩溃。我们索引的字节落在了 <code>中</code> 字符的内部，这种返回没有任何意义。因此在通过索引区间来访问字符串时，<strong>需要格外的小心</strong>，一不注意，就会导致你程序的崩溃！</p>
 
 </section>
 
@@ -445,7 +528,45 @@
             >
 
             </main>
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#字符串与切片">字符串与切片</a>
+      <ol>
+        <li><a href="#切片">切片</a></li>
+        <li><a href="#rust中的字符串">Rust中的字符串</a></li>
+        <li><a href="#string-与-str-的转换">String 与 &amp;str 的转换</a></li>
+        <li><a href="#字符串切片">字符串切片</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
         </div>
         <script 
